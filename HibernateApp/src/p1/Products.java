@@ -22,12 +22,12 @@ public class Products {
 	private int price;
 	
 	@Column(name="reviewRatings")
-	private int reviewRatings;
+	private float reviewRatings;
 	
 	@Column(name="category")
 	private String category;
 
-	public Products(int productId, String productName, int price, int reviewRatings, String category) {
+	public Products(int productId, String productName, int price, float reviewRatings, String category) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
@@ -65,11 +65,11 @@ public class Products {
 		this.price = price;
 	}
 
-	public int getReviewRatings() {
+	public float getReviewRatings() {
 		return reviewRatings;
 	}
 
-	public void setReviewRatings(int reviewRatings) {
+	public void setReviewRatings(float reviewRatings) {
 		this.reviewRatings = reviewRatings;
 	}
 
