@@ -9,24 +9,9 @@ public class MainClass {
 		
 		ApplicationContext spring = new ClassPathXmlApplicationContext("spring-config.xml");
 		Order o = (Order)spring.getBean("order");
-		o.setFinalOrderAmount(o.getNetBankingPayment().doPayment(o.getGrossOrderAmount()));
+		o.setFinalOrderAmount(o.getModeOfPayment().doPayment(o.getGrossOrderAmount()));
 		System.out.println(o);
-		
-		System.out.println("\n----------------------------------------");
-		
-		o.setFinalOrderAmount(o.getCodPayment().doPayment(o.getGrossOrderAmount()));
-		System.out.println(o);
-		
-		System.out.println("\n----------------------------------------");
-		o.setFinalOrderAmount(o.getCcPayment().doPayment(o.getGrossOrderAmount()));
-		System.out.println(o);
-		
-		System.out.println("\n----------------------------------------");
-		
-		o.setFinalOrderAmount(o.getDcPayment().doPayment(o.getGrossOrderAmount()));
-		System.out.println(o);
-		
-		
+			
 		
 	}
 

@@ -14,20 +14,9 @@ public class Order {
 	private int finalOrderAmount;
 	
 	@Autowired
-	@Qualifier("netBanking")
-	private Payment netBankingPayment;
-	
-	@Autowired
 	@Qualifier("cashOnDelivery")
-	private Payment codPayment;
-	
-	@Autowired
-	@Qualifier("creditCardPayment")
-	private Payment ccPayment;
-	
-	@Autowired
-	@Qualifier("debitCardPayment")
-	private Payment dcPayment;
+	private Payment modeOfPayment;
+
 	
 	
 	
@@ -68,40 +57,14 @@ public class Order {
 		this.finalOrderAmount = finalOrderAmount;
 	}
 
-	
 
-	public Payment getNetBankingPayment() {
-		return netBankingPayment;
+
+	public Payment getModeOfPayment() {
+		return modeOfPayment;
 	}
 
-	public void setNetBankingPayment(Payment netBankingPayment) {
-		this.netBankingPayment = netBankingPayment;
-	}
-
-	public Payment getCodPayment() {
-		return codPayment;
-	}
-
-	public void setCodPayment(Payment codPayment) {
-		this.codPayment = codPayment;
-	}
-	
-	
-
-	public Payment getCcPayment() {
-		return ccPayment;
-	}
-
-	public void setCcPayment(Payment ccPayment) {
-		this.ccPayment = ccPayment;
-	}
-
-	public Payment getDcPayment() {
-		return dcPayment;
-	}
-
-	public void setDcPayment(Payment dcPayment) {
-		this.dcPayment = dcPayment;
+	public void setModeOfPayment(Payment modeOfPayment) {
+		this.modeOfPayment = modeOfPayment;
 	}
 
 	@Override
